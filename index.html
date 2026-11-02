@@ -1,0 +1,56 @@
+<div class="habit-list" id="habitList"></div>
+
+<button class="add-button" id="openModal">
+  ＋ Добавить привычку
+</button>
+<div class="calendar-card">
+  <div class="calendar-header">
+    <div class="month-name" id="monthName"></div>
+    <div class="calendar-nav">
+      <button class="nav-button" id="prevMonth" aria-label="Предыдущий месяц">‹</button>
+      <button class="nav-button" id="nextMonth" aria-label="Следующий месяц">›</button>
+    </div>
+  </div>
+
+  <div class="weekdays">
+    <div class="weekday">ПН</div>
+    <div class="weekday">ВТ</div>
+    <div class="weekday">СР</div>
+    <div class="weekday">ЧТ</div>
+    <div class="weekday">ПТ</div>
+    <div class="weekday">СБ</div>
+    <div class="weekday">ВС</div>
+  </div>
+
+  <div class="calendar-grid" id="calendarGrid"></div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="dot green"></span> Цель выполнена</div>
+    <div class="legend-item"><span class="dot yellow"></span> Частично</div>
+    <div class="legend-item"><span class="dot gray"></span> Нет отметок</div>
+  </div>
+</div>
+<form id="habitForm">
+  <label class="field-label" for="habitName">Название</label>
+  <input
+    class="field"
+    id="habitName"
+    maxlength="50"
+    placeholder="Например, читать 10 страниц"
+    required
+  >
+
+  <label class="field-label" for="habitEmoji">Эмодзи</label>
+  <input
+    class="field"
+    id="habitEmoji"
+    maxlength="8"
+    value="✨"
+    placeholder="Например, 📚"
+  >
+
+  <div class="modal-actions">
+    <button type="button" class="cancel-button" id="closeModal">Отмена</button>
+    <button type="submit" class="save-button">Добавить</button>
+  </div>
+</form>
